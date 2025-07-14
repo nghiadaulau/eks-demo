@@ -94,9 +94,6 @@ temp/
 *.tfstate.*
 .terraform/
 .terraform.lock.hcl
-terraform.tfvars
-*.tfvars
-*.tfvars.json
 override.tf
 override.tf.json
 *_override.tf
@@ -164,7 +161,6 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-karpenter
 
 # Virtual environments
 venv/

@@ -1,0 +1,18 @@
+---
+apiVersion: karpenter.k8s.aws/v1
+kind: EC2NodeClass
+metadata:
+  name: default
+spec:
+  role: arn:aws:iam::033254313603:role/eks-demo-cluster-karpenter-node-role
+  subnetSelectorTerms:
+    - tags:
+        karpenter.sh/discovery: eks-demo-cluster
+  securityGroupSelectorTerms:
+    - tags:
+        karpenter.sh/discovery: eks-demo-cluster
+  amiFamily: Bottlerocket
+  amiSelectorTerms:
+    - alias: bottlerocket@latest
+  tags:
+    Name: karpenter-default

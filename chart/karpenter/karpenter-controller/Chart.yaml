@@ -1,0 +1,12 @@
+apiVersion: v2
+name: karpenter
+description: A Helm chart for karpenter
+
+type: application
+version: 1.0.0
+appVersion: v0.23.0
+
+dependencies:
+  - name: karpenter
+    version: 1.5.1
+    repository: oci://public.ecr.aws/karpenter
